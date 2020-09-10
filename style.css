@@ -325,8 +325,6 @@ p{
 	margin-right: 2rem;
 }
 .more-done .progresss-bar .progress{
-	width: 150px;
-	height: 150px;
 	border-radius: 50%;
 	background-color: blue;
 	display: inline;
@@ -883,5 +881,8 @@ p{
 	}
 	.header .menu.actives .menu-toggle{
 		top: 20px;
+	}
+	.header .clicked{
+		height: 20rem;
 	}
 }
