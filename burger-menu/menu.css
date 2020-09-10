@@ -1,0 +1,78 @@
+
+body{
+	margin: 0;
+	scroll-behavior: smooth;
+}
+nav{
+	padding: 0 2rem;
+	background: #909090;
+	position: relative;
+	justify-content: space-between;
+	height: 0rem;
+	min-height: 60px;
+	overflow: hidden;
+	transition: height 1s cubic-bezier(0.26, -0.01, 0,  1.01);
+}
+.flex-row{
+	display: flex;
+	flex-wrap: wrap;
+}
+a{
+	text-decoration: none;
+}
+.text-black{
+	color: #000;
+}
+nav .nav-brand a{
+	display: block;
+	padding: 1rem 0;
+	font-size: 1.6rem;
+}
+nav .nav-items{
+	list-style: none;
+	margin: 0;
+}
+nav .nav-items .nav-link{
+	padding: 1.3rem 1rem;
+	font-size: 1.1rem;
+}
+nav .nav-items .nav-link:hover{
+	background: blue;
+}
+nav .nav-items .nav-link:hover a{
+	color: #fff;
+}
+nav .toggle-collapse{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	cursor: pointer;
+}
+nav .toggle-collapse .icon{
+	display: flex;
+	justify-content: flex-end;
+	padding: 1.4rem 4rem;
+}
+nav .toggle-collapse .icon i{
+	font-size: 1.4rem;
+}
+.active{
+	height: 25rem;
+}
+@media(max-width: 991px){
+	nav .nav-items{
+		flex-direction: column;
+	}
+	nav{
+		flex-direction: column !important;
+		display: block !important;
+	}
+}
+@keyframes animate{
+	0%{
+		height: 0;
+	}
+	100%{
+		height: 100%;
+	}
+}
