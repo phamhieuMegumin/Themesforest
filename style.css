@@ -90,6 +90,12 @@ p{
 	font-weight: 400;
 	transition: color 0.3s;
 }
+.header-img{
+	width: auto;
+}
+.header-img img{
+	width: 100%;
+}
 .clicked{
 	height: 20rem;
 }
@@ -214,7 +220,6 @@ p{
 
 .logo-icon{
 	background: #f8f9fa;
-	padding: 4.5rem 4rem;
 	display: flex;
 	justify-content: space-around;
 }
@@ -675,6 +680,26 @@ p{
     font-size: .9rem;
     font-weight: 600;
 }
+.swiper-container{
+	width: 100%;
+	height: 150px;
+}
+.swiper-container .swiper-slide{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 260px !important;
+	padding: 0 0;
+}
+.swiper-container .swiper-slide .swiper-slide-active{
+	width: 50px;
+}
+.feature-img{
+	width: auto;
+}
+.feature-img img{
+	width: 100%;
+}
 
 /*-----------------------------------------------*/
 
@@ -806,5 +831,57 @@ p{
 @media(max-width: 767px){
 	.pricing .list-cost .cards{
 		min-width: calc(100% - 30px);
+	}
+}
+@media(max-width: 500px){
+	.pricing .tittle{
+		padding: 0;
+	}
+	.subscribe .sub-box{
+		width: 100%;
+	}
+	.info{
+		padding : 6rem 0;
+	}
+	.persen{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	.more-done .progresss-bar .persen .box:nth-child(1){
+		margin: 0;
+		margin-bottom: 1rem;
+	}
+	.header .header-info .header-text .header-btn .watchvd{
+		flex-direction: column;
+		margin: 0;
+	}
+	.header .header-info .header-text{
+		width: 100%;
+	}
+	.header .header-info .header-img{
+		margin-left: 0;
+	}
+	.client-txt{
+		padding: 0;
+	}
+	.footer{
+		padding : 3rem 0;
+	}
+	.footer .social a{
+		margin: 0 1rem;
+	}
+	.contact .banner{
+		padding: 5rem 10px;
+	}
+	.swiper-slide{
+		padding: 0 10%;
+	}
+	.header .menu{
+		padding: 2rem 1rem;
+	}
+	.header .menu.actives .menu-toggle{
+		top: 20px;
 	}
 }

@@ -50,11 +50,16 @@
 			</div>
 		</section>
 		<section  id="about" class="logo-icon">
-			<img src="./img/logo1.png" style="height: 25px">
-			<img src="./img/logo2.png" style="height: 32px">
-			<img src="./img/logo3.png" style="height: 25px">
-			<img src="./img/logo4.png" style="height: 32px">
-			<img src="./img/logo5.png" style="height: 30px">
+			<div class="swiper-container">
+				<div class="swiper-wrapper">
+				  <div class="swiper-slide"><img src="./img/logo1.png" style="height: 25px"></div>
+				  <div class="swiper-slide"><img src="./img/logo2.png" style="height: 32px"></div>
+				  <div class="swiper-slide"><img src="./img/logo3.png" style="height: 25px"></div>
+				  <div class="swiper-slide"><img src="./img/logo4.png" style="height: 32px"></div>
+				  <div class="swiper-slide"><img src="./img/logo5.png" style="height: 30px"></div>
+				  <!-- <div class="swiper-slide"></div> -->
+				</div>
+			</div>
 		</section>
 		<section class="info">
 			<div class="info-detail wow fadeInUp" data-wow-delay="0.4s">
@@ -181,7 +186,9 @@
 						</div>
 					</div>
 				</div>
-				<img class="wow bounceInUp" src="./img/3.png" data-wow-offset="200" data-wow-duration="1.6s">
+				<div class="feature-img">
+					<img class="wow bounceInUp" src="./img/3.png" data-wow-offset="200" data-wow-duration="1.6s">
+				</div>
 			</div>
 		</section>
 		<section id="client" class="client">
@@ -191,7 +198,7 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
 				</div>		
 				<div class="client-say">
-					<div class="swiper-container">
+					<div class="slide-users">
 					    <div class="swiper-wrapper" style="user-select: none;">
 					      <div class="swiper-slide">
 					      	<img src="./img/1.jpg">
@@ -322,11 +329,31 @@
            		trackColor: 'rgba(0, 0, 0, 0.1)',
         	});
     	});
-		 var swiper = new Swiper('.swiper-container', {
+	var swiper = new Swiper('.slide-users', {
       pagination: {
         el: '.swiper-pagination',
       },
     });
+	var swiper = new Swiper('.swiper-container', {
+      slidesPerView: 3,
+      direction: getDirection(),
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      on: {
+        resize: function () {
+          swiper.changeDirection(getDirection());
+        }
+      }
+    });
+
+    function getDirection() {
+      var windowWidth = window.innerWidth;
+      var direction = window.innerWidth <= 300 ? 'vertical' : 'horizontal';
+
+      return direction;
+    }
 	</script>
 </body>
 </html>
